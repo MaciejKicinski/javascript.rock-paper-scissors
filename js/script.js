@@ -6,7 +6,7 @@ function buttonClicked(argButtonName) {
     const playerMove = argButtonName;
     const randomNumber = Math.floor(Math.random() * 3 + 1);
     const computerMove = getMoveName(randomNumber);
-    
+
     clearMessages();
     console.log(argButtonName + ' został kliknięty');
     console.log('ruch gracza to: ' + playerMove);
@@ -39,10 +39,6 @@ function displayResult(argPlayerMove, argComputerMove) {
         printMessage('Wygrywasz!');
     } else if (argPlayerMove == 'papier' && argComputerMove == 'nożyce') {
         printMessage('Przegrywasz :(');
-    } else if (argPlayerMove == 'papier' && argComputerMove == 'papier') {
-        printMessage('remis');
-    } else if (argPlayerMove == 'kamień' && argComputerMove == 'kamień') {
-        printMessage('Remis!');
     } else if (argPlayerMove == 'kamień' && argComputerMove == 'papier') {
         printMessage('Przegrywasz :(');
     } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
@@ -51,7 +47,7 @@ function displayResult(argPlayerMove, argComputerMove) {
         printMessage('Przegrywasz :(');
     } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
         printMessage('Wygrywasz!');
-    } else if (argPlayerMove == 'nożyce' && argComputerMove == 'nożyce') {
+    } else if (argPlayerMove == argComputerMove) {
         printMessage('Remis!');
     } else {
         printMessage('Przegrywasz :(');
